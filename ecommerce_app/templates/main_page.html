@@ -1,0 +1,32 @@
+<!-- ecommerce_app/templates/main_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our E-commerce Site</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-commerce Site</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'product_list' %}">Product List</a></li>
+            <li><a href="{% url 'view_cart' %}">View Cart</a></li>
+            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+
+    <section>
+        <!-- Your main content goes here -->
+        {% block content %}{% endblock %}
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your E-commerce Site</p>
+    </footer>
+</body>
+</html>
